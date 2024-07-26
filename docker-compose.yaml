@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  adservcie:
+    container_name: insights-demo-adservice
+    image: insights-demo-adservice
+    environment:
+      VULN_LOG4SHELL_ENABLED: 1
+    ports:
+      - 8080:8080
+      - 9555:9555
+    build:
+      context: .
